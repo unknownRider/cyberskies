@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hackthebox on CyberSkies</title>
+    <link>http://localhost:1313/categories/hackthebox/</link>
+    <description>Recent content in Hackthebox on CyberSkies</description>
+    <generator>Hugo -- 0.155.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Jul 2024 11:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/hackthebox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Passing the CBBH</title>
+      <link>http://localhost:1313/blog/cbbh_cwe/</link>
+      <pubDate>Sat, 20 Jul 2024 11:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/blog/cbbh_cwe/</guid>
+      <description>&lt;p&gt;Preparing for the Certified Bug Bounty Hunter aka the CBBH from HacktheBox? Here&amp;rsquo;s my review along with some tips and tricks. As of 1 July 2024, there are roughly 530 qualified individuals.&lt;/p&gt;
+&lt;p&gt;Ps. I passed!&lt;/p&gt;
+&lt;h1 id=&#34;the-exam&#34;&gt;The Exam&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Fully hands-on, zero multiple choice questions&lt;/li&gt;
+&lt;li&gt;Requires 100% completion of the HTB academy &lt;a href=&#34;https://academy.hackthebox.com/path/preview/bug-bounty-hunter&#34;&gt;bug bounty hunter job role path.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Black box environment&lt;/li&gt;
+&lt;li&gt;Zero limitations on tools.&lt;/li&gt;
+&lt;li&gt;7 days total to complete all exam requirements. Including:
+&lt;ul&gt;
+&lt;li&gt;A professional report.&lt;/li&gt;
+&lt;li&gt;A minimum number of flags (or a score of 80/100).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;You receive 2 exam attempts per voucher.&lt;/li&gt;
+&lt;li&gt;You can reference the academy modules at anytime during the exam.&lt;/li&gt;
+&lt;li&gt;The exam is aimed at beginners with little or no prior experience. If you&amp;rsquo;ve never done a hands-on &amp;lsquo;hacking&amp;rsquo; exam, I&amp;rsquo;d highly recommend this be your first. Honestly I wish I did it BEFORE I did the CPTS, but oh well. I&amp;rsquo;ll explain more on this later.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;preparing&#34;&gt;Preparing&lt;/h1&gt;
+&lt;p&gt;Completing the bug bounty path is a prerequisite for the exam. Some may finish in 4-6 weeks, others may take a few months. It just depends on how much free time you have, so don&amp;rsquo;t worry about how long it takes you. Instead, focus on having a &lt;em&gt;solid understanding of the course material&lt;/em&gt;. I previously completed the CPTS exam (see that review &lt;a href=&#34;https://cyberskies.org/posts/CPTS/&#34;&gt;here&lt;/a&gt;) so I completed the remaining ~50% of the modules in a few weeks. Here are all 20 modules you need to complete.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

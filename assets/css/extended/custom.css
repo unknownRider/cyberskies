@@ -1,0 +1,19 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--theme);
+    padding: 2rm
+}
+
+body {
+    padding-top: 30px;
+}
+
+.post-entry {
+    padding: 1.0rem;  /* Default is larger, adjust this */
+    margin-bottom: 1.0rem;  /* Space between posts */
+}
+

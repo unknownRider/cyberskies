@@ -1,0 +1,37 @@
+{{- define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">{{ .Description }}</div>
+  {{- end }}
+</header>
+
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- if site.Params.ShowAllPagesInArchive }}
+{{- $pages = site.RegularPages }}
+{{- end }}
+
+<div class="timeline-container">
+{{- range $pages.GroupByPublishDate "2006" }}
+{{- if ne .Key "0001" }}
+  {{- $year := replace .Key "0001" "" }}
+  <div class="timeline-year">
+    <h2 class="year-header">{{ $year }}</h2>
+    <div class="timeline-posts">
+    {{- range .Pages }}
+    {{- if eq .Kind "page" }}
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <time>{{ .Date.Format "Jan 02" }}</time>
+          <h3><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h3>
+        </div>
+      </div>
+    {{- end }}
+    {{- end }}
+    </div>
+  </div>
+{{- end }}
+{{- end }}
+</div>
+{{- end }}

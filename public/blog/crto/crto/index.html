@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Passing the CRTO: Intro to Redteaming | CyberSkies</title>
+<meta name="keywords" content="redteam">
+<meta name="description" content="I passed the Certified Red Team Operator (CRTO) exam and all I got was this cert (and a sweet new skill set)">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/blog/crto/crto/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.49d3ed43c38c66d8ac73263ed6863cc580827f643c734eacf5e3f5ceabf61486.css" integrity="sha256-SdPtQ8OMZtiscyY&#43;1oY8xYCCf2Q8c06s9eP1zqv2FIY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/crto/crto/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="http://localhost:1313/blog/crto/crto/">
+  <meta property="og:site_name" content="CyberSkies">
+  <meta property="og:title" content="Passing the CRTO: Intro to Redteaming">
+  <meta property="og:description" content="I passed the Certified Red Team Operator (CRTO) exam and all I got was this cert (and a sweet new skill set)">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-01-03T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-01-03T00:00:00+00:00">
+    <meta property="article:tag" content="Redteam">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Passing the CRTO: Intro to Redteaming">
+<meta name="twitter:description" content="I passed the Certified Red Team Operator (CRTO) exam and all I got was this cert (and a sweet new skill set)">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "http://localhost:1313/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Passing the CRTO: Intro to Redteaming",
+      "item": "http://localhost:1313/blog/crto/crto/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Passing the CRTO: Intro to Redteaming",
+  "name": "Passing the CRTO: Intro to Redteaming",
+  "description": "I passed the Certified Red Team Operator (CRTO) exam and all I got was this cert (and a sweet new skill set)",
+  "keywords": [
+    "redteam"
+  ],
+  "articleBody": "Certified Red Team Operator (CRTO) Zero-Point Security’s ‘CRTO’ is an intermediate level certification covering cobalt strike, antivirus evasion, and common red team tactics in a Windows active directory environment. This is my experience, along with a few tips and tricks for those looking to take the exam.\nThis was one of my first ‘red team’ style certifications, and it was quite different than I expected!\nThe Exam Students have a total of 4 days to pass the exam. There is also a limit on the exam run time which is capped at 48 hours. Essentially… you have up to 12 hours a day for 4 days. There are no daily time limits, and students can pause the exam environment as needed. Pausing the exam does stop your 48 hour timer, but does not change the 4 day limit. This is plenty of time, but it can go by very quickly if your not prepared. Students must submit at least 6 of the 8 flags to pass (75%).\nThere is no required report for this exam… This may be one of the reasons I chose it :) Preparation I did not do anything outside of the official coursework, however I’m very familiar with capture the flag competitions, including HackTheBox, and some of their Prolabs. Outside resources aren’t needed to pass the exam, but testers should be very familiar with capture the flag style exams. If your fairly new and not feeling very confident with active directory, then I’d recommend the Zephyr prolab by HackTheBox. I did this prolab a few months back, and I still think it’s a great introduction to Windows active directory exploits.\nIn my opinion this is not an exam for beginners or those new to hacking. If you’re a beginner looking to take your first hands-on exam, then I’d definitely recommend the CBBH instead. However, if your highly interested in red teaming, and evading detection sounds interesting to you, go for it!!\nMy Experience Penetration testing and red teaming can often be used interchangeably by those not in the field of IT. Well let me tell you… this exam reminded me of the stark differences between the two. Personally I found red teaming to be much more tedious, and I’ll explain why.\nTroubleshooting is difficult\nIf you didn’t adequately test your payloads BEFORE the exam. Then how the heck do you know if they are working properly? (I may have rushed this and learned the hard way…) Maybe antivirus blew it away Maybe firewall rules blocked your chosen exfil port Maybe Windows SmartScreen is enabled and is blocking executables Maybe… who knows!! You can’t exactly call IT support for your troubleshooting woes. In fact the more time you burn, the higher chance you will be detected.\nAntivirus (AV) evasion can be tedious\nUtilizing a tool like ThreatChecker helps in determining what lines of code inside your payload are being caught by Windows Defender. This means running the tool, checking your code, modifying it, and repeating the process… as many times as it takes. Oh, and you may want to check your payload to make sure you don’t break it along the way. Overall, I breezed through finding and exploiting vulnerabilities found in the exam, but where I struggled was actually the setup! I definitely rushed this part and did not take the time to ensure all my payloads were working, with Windows Defender turned off, AND Windows Defender switched on. I also had some errors inside my custom c2 profile that I needed to fix. I highly suggest you have all of these items setup well before you start your exam. Since the exam is extremely limited on tooling, I highly suggest you have these items available to quickly copy/paste into the environment. So make the most of your lab training time! Once it expires you won’t be able to go back and practice these items until the real thing.\nDid I enjoy the exam? Honestly I’m not sure if red teaming is right for me… but that’s why I took the exam in the first place! Overall I’m glad I achieved my CRTO certification as I think it’s a nice resume builder and great introduction to red teaming. For now, white-box style, cooperative assessments are still my favorite. We’ll see if that changes in the future!\nAt times I thought the structure of the course was hard to follow, but the overall content was good. (2026 Update: It seems this has been fixed in redesigned course). It focuses heavily on Cobalt Strike, which I really wanted to try out. It is worth noting that a Cobalt Strike license costs over $3,000 US/yr! and to my knowledge CRTO is the only exam that focuses on learning and utilizing this framework. Overall, I had a good experience capturing 6 flags to pass.\nWould you recommend it to others? If your looking to dip your toes into red teaming, then heck yes! If you looking to expand your Cobalt Strike knowledge, or even build your own C2, then yes! If you are looking to get your first hands-on certification, then I’d say there are better options. Thoughts on Red Teaming The CRTO is one of the few certifications targeted specifically at ‘red teaming’. So what exactly is red teaming and how’s it different than penetration testing?\nRed teaming requires precision, and a much ‘quieter’ methodology when compared to penetration testing. You can’t just barge in and start blasting (#FrankReynolds).\nDropping payloads onto systems and generating tons of network traffic is going to increase your chances of getting caught. This means red teamers need to:\nGenerate less traffic. Conceal their steps. Stick to a proven methodology. Utilize custom tools which are essential to evasion. Personally I think penetration testers can be a bit more creative in their approach because they typically work much closer to the customer. This sounds counter-intuitive, but red-teamers work very hard to develop custom tooling. They don’t exactly want these tools getting signatured by anti-virus or exposed to the public, so this means there is a ’no blasting’ policy. Sorry Frank. Nmap’ing the entire network as a penetration tester might be fine, but this a definite no-go as a red teamer.\nRed teamers need to be extremely methodical in their approach to getting and maintaining system access. In comparison, pen testers have a lot more luxuries. They might even work alongside internal teams in a cooperative style assessment. Heck, I’ve had developers tip me off about areas of concern! This not only saves a ton of time, but also means defenders won’t go shutting off your connection if they see a ton of nmap traffic across the network 😅. This makes things like enumeration and pivoting significantly easier, and much less time consuming. Since red teamers need to stay under the radar the entire engagement, they use significantly different tools, tactics and procedures, compared to penetration testers.\nResources For those who prefer a video format, or are just binging anything and everything about the exam before taking it, then watch Andy Li’s video, I found it the most helpful before I sat for the exam.\nhttps://www.youtube.com/watch?v=2IPxJSIe-lk\n",
+  "wordCount" : "1190",
+  "inLanguage": "en",
+  "datePublished": "2025-01-03T00:00:00Z",
+  "dateModified": "2025-01-03T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/blog/crto/crto/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CyberSkies",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="CyberSkies (Alt + H)">
+                <img src="http://localhost:1313/home/logo1.png" alt="" aria-label="logo"
+                    height="45">CyberSkies</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/blog/">Blogs</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Passing the CRTO: Intro to Redteaming
+    </h1>
+    <div class="post-meta"><span title='2025-01-03 00:00:00 +0000 UTC'>January 3, 2025</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#certified-red-team-operator-crto" aria-label="Certified Red Team Operator (CRTO)">Certified Red Team Operator (CRTO)</a></li>
+                <li>
+                    <a href="#the-exam" aria-label="The Exam">The Exam</a></li>
+                <li>
+                    <a href="#preparation" aria-label="Preparation">Preparation</a></li>
+                <li>
+                    <a href="#my-experience" aria-label="My Experience">My Experience</a><ul>
+                        
+                <li>
+                    <a href="#did-i-enjoy-the-exam" aria-label="Did I enjoy the exam?">Did I enjoy the exam?</a></li>
+                <li>
+                    <a href="#would-you-recommend-it-to-others" aria-label="Would you recommend it to others?">Would you recommend it to others?</a></li></ul>
+                </li>
+                <li>
+                    <a href="#thoughts-on-red-teaming" aria-label="Thoughts on Red Teaming">Thoughts on Red Teaming</a></li>
+                <li>
+                    <a href="#resources" aria-label="Resources">Resources</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="certified-red-team-operator-crto">Certified Red Team Operator (CRTO)<a hidden class="anchor" aria-hidden="true" href="#certified-red-team-operator-crto">#</a></h2>
+<p>Zero-Point Security&rsquo;s &lsquo;CRTO&rsquo; is an intermediate level certification covering cobalt strike, antivirus evasion, and common red team tactics in a Windows active directory environment. This is my experience, along with a few tips and tricks for those looking to take the exam.</p>
+<p>This was one of my first &lsquo;red team&rsquo; style certifications, and it was quite different than I  expected!</p>
+<h2 id="the-exam">The Exam<a hidden class="anchor" aria-hidden="true" href="#the-exam">#</a></h2>
+<p>Students have a total of 4 days to pass the exam. There is also a limit on the exam run time which is capped at 48 hours. Essentially&hellip; you have up to 12 hours a day for 4 days. There are no daily time limits, and students can pause the exam environment as needed. Pausing the exam <em>does</em> stop your 48 hour timer, but <em>does not</em> change the 4 day limit. This is plenty of time, but it can go by very quickly if your not prepared. Students must submit at least 6 of the 8 flags to pass (75%).</p>
+
+          <link rel="stylesheet" href="/css/vendors/admonitions.css">
+    <div class="admonition tip">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2c0 0 0 0 0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4c0 0 0 0 0 0c19.8 27.1 39.7 54.4 49.2 86.2l160 0zM192 512c44.2 0 80-35.8 80-80l0-16-160 0 0 16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/></svg>
+        <span>There is no required report for this exam&hellip; This may be one of the reasons I chose it :)</span>
+      </div>
+    </div><h2 id="preparation">Preparation<a hidden class="anchor" aria-hidden="true" href="#preparation">#</a></h2>
+<p>I did not do anything outside of the official coursework, however I&rsquo;m very familiar with capture the flag competitions, including HackTheBox, and some of their Prolabs. Outside resources aren&rsquo;t needed to pass the exam, but testers should be very familiar with capture the flag style exams. If your fairly new and not feeling very confident with active directory, then I&rsquo;d recommend the <a href="https://www.hackthebox.com/blog/professional-labs-zephyr">Zephyr</a> prolab by HackTheBox. I did this prolab a few months back, and I still think it&rsquo;s a great introduction to Windows active directory exploits.</p>
+<p>In my opinion this is not an exam for beginners or those new to hacking. If you&rsquo;re a beginner looking to take your first hands-on exam, then I&rsquo;d definitely recommend the <a href="https://cyberskies.org/posts/cbbh/">CBBH</a> instead. However, if your highly interested in red teaming, and evading detection sounds interesting to you, go for it!!</p>
+<h2 id="my-experience">My Experience<a hidden class="anchor" aria-hidden="true" href="#my-experience">#</a></h2>
+<p>Penetration testing and red teaming can often be used interchangeably by those not in the field of IT. Well let me tell you&hellip; this exam reminded me of the stark differences between the two. Personally I found red teaming to be much more tedious, and I&rsquo;ll explain why.</p>
+<ol>
+<li><strong>Troubleshooting is difficult</strong><br>
+If you didn&rsquo;t adequately test your payloads BEFORE the exam. Then how the heck do you know if they are working properly? (I may have rushed this and learned the hard way&hellip;)</li>
+</ol>
+<ul>
+<li>Maybe antivirus blew it away</li>
+<li>Maybe firewall rules blocked your chosen exfil port</li>
+<li>Maybe Windows SmartScreen is enabled and is blocking executables</li>
+<li>Maybe&hellip; who knows!!</li>
+</ul>
+<p>You can&rsquo;t exactly call IT support for your troubleshooting woes. In fact the more time you burn, the higher chance you will be detected.</p>
+<ol start="2">
+<li><strong>Antivirus (AV) evasion can be tedious</strong><br>
+Utilizing a tool like <a href="https://github.com/rasta-mouse/**ThreatCheck**">ThreatChecker</a> helps in determining what lines of code inside your payload are being caught by Windows Defender. This means running the tool, checking your code, modifying it, and repeating the process&hellip; as many times as it takes. Oh, and you may want to check your payload to make sure you don&rsquo;t break it along the way.</li>
+</ol>
+<p>Overall, I breezed through finding and exploiting vulnerabilities found in the exam, but where I struggled was actually the setup! I definitely rushed this part and did not take the time to ensure all my payloads were working, with Windows Defender turned off, AND Windows Defender switched on. I also had some errors inside my custom c2 profile that I needed to fix. I highly suggest you have all of these items setup well before you start your exam. Since the exam is extremely limited on tooling, I highly suggest you have these items available to quickly copy/paste into the environment. So make the most of your lab training time! Once it expires you won&rsquo;t be able to go back and practice these items until the real thing.</p>
+<h3 id="did-i-enjoy-the-exam">Did I enjoy the exam?<a hidden class="anchor" aria-hidden="true" href="#did-i-enjoy-the-exam">#</a></h3>
+<ul>
+<li>
+<p>Honestly I&rsquo;m not sure if red teaming is right for me&hellip; but that&rsquo;s why I took the exam in the first place! Overall I&rsquo;m glad I achieved my CRTO certification as I think it&rsquo;s a nice resume builder and great introduction to red teaming. For now, white-box style, cooperative assessments are still my favorite. We&rsquo;ll see if that changes in the future!</p>
+</li>
+<li>
+<p>At times I thought the structure of the course was hard to follow, but the overall content was good. (2026 Update: It seems this has been fixed in redesigned course). It focuses heavily on Cobalt Strike, which I really wanted to try out. It is worth noting that a Cobalt Strike license costs over $3,000 US/yr! and to my knowledge CRTO is the only exam that focuses on learning and utilizing this framework. Overall, I had a good experience capturing 6 flags to pass.</p>
+</li>
+</ul>
+<h3 id="would-you-recommend-it-to-others">Would you recommend it to others?<a hidden class="anchor" aria-hidden="true" href="#would-you-recommend-it-to-others">#</a></h3>
+<ul>
+<li>If your looking to dip your toes into red teaming, then heck yes! If you looking to expand your Cobalt Strike knowledge, or even build your own C2, then yes! If you are looking to get your first hands-on certification, then I&rsquo;d say there are better options.</li>
+</ul>
+<h2 id="thoughts-on-red-teaming">Thoughts on Red Teaming<a hidden class="anchor" aria-hidden="true" href="#thoughts-on-red-teaming">#</a></h2>
+<p>The CRTO is one of the few certifications targeted specifically at &lsquo;red teaming&rsquo;. So what exactly is red teaming and how&rsquo;s it different than penetration testing?</p>
+<p>Red teaming requires precision, and a much &lsquo;quieter&rsquo; methodology when compared to penetration testing. You can&rsquo;t just barge in and start blasting (#FrankReynolds).<br>
+<img src= "https://raw.githubusercontent.com/MTTGIT19/mttgit19.github.io/refs/heads/main/assets/img/frankreynolds.png" width="250"></p>
+<p>Dropping payloads onto systems and generating tons of network traffic is going to increase your chances of getting caught. This means red teamers need to:</p>
+<ul>
+<li>Generate less traffic.</li>
+<li>Conceal their steps.</li>
+<li>Stick to a proven methodology.</li>
+<li>Utilize custom tools which are essential to evasion.</li>
+</ul>
+<p>Personally I think penetration testers can be a bit more <em>creative</em> in their approach because they typically work much closer to the customer. This sounds counter-intuitive, but red-teamers work very hard to develop custom tooling. They don&rsquo;t exactly want these tools getting signatured by anti-virus or exposed to the public, so this means there is a &rsquo;no blasting&rsquo; policy. Sorry Frank. Nmap&rsquo;ing the entire network as a penetration tester might be fine, but this a definite no-go as a red teamer.</p>
+<p>Red teamers need to be extremely methodical in their approach to getting and maintaining system access. In comparison, pen testers have a lot more luxuries. They might even work alongside internal teams in a cooperative style assessment. Heck, I&rsquo;ve had developers tip me off about areas of concern! This not only saves a ton of time, but also means defenders won&rsquo;t go shutting off your connection if they see a ton of nmap traffic across the network 😅.  This makes things like enumeration and pivoting significantly easier, and much less time consuming. Since red teamers need to stay under the radar the entire engagement, they use significantly different tools, tactics and procedures, compared to penetration testers.</p>
+<h2 id="resources">Resources<a hidden class="anchor" aria-hidden="true" href="#resources">#</a></h2>
+<p>For those who prefer a video format, or are just binging anything and everything about the exam before taking it, then watch Andy Li&rsquo;s video, I found it the most helpful before I sat for the exam.</p>
+<p><a href="https://www.youtube.com/watch?v=2IPxJSIe-lk">https://www.youtube.com/watch?v=2IPxJSIe-lk</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/redteam/">Redteam</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">CyberSkies</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
