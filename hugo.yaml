@@ -2,8 +2,8 @@ baseURL: "https://cyberskies.org"
 languageCode: en-us
 title: CyberSkies
 theme: 
-  - PaperMod
   - hugo-admonitions
+  - PaperMod
 
 menu:
   main:
