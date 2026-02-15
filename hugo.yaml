@@ -43,7 +43,7 @@ params:
   # Home Page
   label:
     text: "CyberSkies"
-    icon: "/home/logo1.png"
+    icon: "/images/logo1.png"
     iconHeight: 45
 
   homeInfoParams:
