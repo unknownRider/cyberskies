@@ -2,6 +2,12 @@
 
 HUGO_VERSION=0.155.3
 
+echo "Configuring Git..."
+git config core.quotepath false
+if [ "$(git rev-parse --is-shallow-repository)" = "true" ]; then
+  git fetch --unshallow
+fi
+
 echo "Initializing submodules..."
 git submodule update --init --recursive
 
