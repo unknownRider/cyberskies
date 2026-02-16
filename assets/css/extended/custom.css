@@ -10,6 +10,12 @@
 
 body {
     padding-top: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.post-content {
+    font-size: 15px;  /* Default is larger, adjust this */
 }
 
 .post-entry {
@@ -17,3 +23,18 @@ body {
     margin-bottom: 1.0rem;  /* Space between posts */
 }
 
+/* Reduce spacing in lists */
+ul, ol {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+ul li, ol li {
+  margin-bottom: .1rem; /* Space between bullet points */
+}
+
+/* Tighter nested lists */
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}

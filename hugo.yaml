@@ -48,9 +48,10 @@ params:
 
   homeInfoParams:
     Title: "Unknown Rider. Negative Transponder."
-    Content: Professional hacker. Tinkerer. Veteran. Learning enthusiast. <br></br>
-        From the cockpit to the command line. My route to offensive security was not a direct route.<br>
-        Advocate of open-source software, DIY projects, and <a href="https://www.swyx.io/learn-in-public">learning in public</a>
+    Content: |
+      #### Professional hacker. Tinkerer. Veteran. Learning enthusiast.
+      - Took the scenic route to offensive security.
+      - Advocate of open-source software, DIY projects, and [learning in public](https://www.swyx.io/learn-in-public).
   profileMode:
     enabled: false
     #title: "UnknownRider"
@@ -95,8 +96,8 @@ params:
 #    - JSON
 
 # allow HTML in MD
-#markup:
-#  goldmark:
-#    renderer:
-#      unsafe: true
+#  markup:
+#    goldmark:
+#      renderer:
+#        unsafe: true
 

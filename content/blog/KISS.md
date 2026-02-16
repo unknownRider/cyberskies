@@ -6,8 +6,7 @@ tags: ["psychology", "mindset"]
 draft: false
 ---
 
-> "We are what we repeatedly do. Excellence, then, is not an act, but a habit." - Will Durant
-{: .prompt-tip }
+>[!TIP] "We are what we repeatedly do. Excellence, then, is not an act, but a habit."
 
 # Murphy’s Law
 
@@ -29,8 +28,7 @@ The first law on this list that concerns interactions on the internet, Cunningha
 
 The Pareto Principle is the idea that it’s often the case that 80% of the output in a particular situation comes from 20% of the input. In a noisy group of students, 20% of the students will be making 80% of the noise. In a call center, 20% of the salespeople produce 80% of the sales. In healthcare, 20% of patients use 80% of the resources.   
 
-## KISS (Keep It Simple Stupid)  
+# KISS (Keep It Simple Stupid)  
 *KISS.* The one-word phrase my boss used to tell me when my solution to a problem was far too technical, and long-winded. I did not realize the power of this advice until much later...   
 
-> **Simple does not mean easy.** 
-{: .prompt-tip }
+>[!SUCCESS] **Simple does not mean easy.**
