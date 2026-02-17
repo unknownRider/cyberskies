@@ -3,19 +3,22 @@ title: "Passing the CPTS: Reality check"
 date: 2024-01-12
 summary: "I was not prepared. Passing HackTheBox's Certified Penetration Testing Specialist aka CPTS exam, updated for 2026."
 categories: [certs]
-tags: ["hackthebox", "cpts"]
+tags: ["hackthebox", "cpts", "pentest"]
 weight: 50
 draft: false
 ---
 
-# Preparing for Hack The Box's CPTS    
+# Passing the CPTS - Turbulence ahead
+### The Certified Penetration Testing Specialist by HacktheBox
 
 > [!SUCCESS]  Updated for 2026!
-## Overview
+> Maybe there is a certain love (or dread) every tester has for their first hands-on hacking exam. For many it was OSCP, for me it was CPTS. To this day I still believe it was the hardest (and best) cert I have ever taken. However at a certain point in your career, you will look back and wonder why you struggled. 
 
-I was one of the first of about 400 or so individuals to successfully pass the Certified Penetration Testing Specialist or CPTS from Hackthebox (as of January 2024). Since then the exam has exploded in popularity! This is my experience with the exam, and plenty of tips and tricks for those looking to take the exam. 
+## Overview 
 
-> [!WARNING] Without a doubt this exam will surpass the OSCP in terms of popularity and HR clout in a few short years.
+I was one of the first of about 400 or so individuals to successfully pass the Certified Penetration Testing Specialist or CPTS from HacktheBox (as of January 2024). Since then the exam has exploded in popularity. Like many others who have taken the course, I firmly believe the quality of the material and labs is currently some of the best on the market. Not to mention the price is much easier to stomach, compared to O...others. I highly recommend CPTS or CWES from HacktheBox as your first hands-on cert.
+
+This is my experience with the exam, and plenty of tips and tricks for those looking to take the exam. 
 
 ## The Exam
 
@@ -142,6 +145,6 @@ Good luck and **Happy Hacking!!** 💻
 - [Hackthebox Official Discord](https://discord.com/invite/hackthebox) : Highly recommended to join if you're working through the academy paths. Most people are very willing to help out. 
 
 **On Discord and the hacking community:** *You're toughest critic is yourself. Reach out to people, don't be afraid to ask for help. Just be specific: [On Asking Questions](https://dontasktoask.com)* 
-- The [video every beginner should watch](https://www.youtube.com/watch?v=0Ejj2aBG5c8) 
+
 
   

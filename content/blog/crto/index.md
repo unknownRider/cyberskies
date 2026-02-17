@@ -3,7 +3,7 @@ title: "Passing the CRTO: Intro to Redteaming"
 date: 2025-01-03
 summary: "I passed the Certified Red Team Operator (CRTO) exam and all I got was this cert (and a sweet new skill set)"
 categories: [certs]
-tags: ["redteam"]     # TAG names should always be lowercase
+tags: ["redteam", "crto", "zero-point security"]     # TAG names should always be lowercase
 draft: false
 ---
  

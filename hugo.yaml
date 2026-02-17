@@ -50,7 +50,7 @@ params:
     Title: "Unknown Rider. Negative Transponder."
     Content: |
       #### Professional hacker. Tinkerer. Veteran. Learning enthusiast.
-      - Took the scenic route to offensive security.
+      - From the cockpit to the command line. I took the scenic route to offensive security.
       - Advocate of open-source software, DIY projects, and [learning in public](https://www.swyx.io/learn-in-public).
   profileMode:
     enabled: false
@@ -100,4 +100,3 @@ params:
 #    goldmark:
 #      renderer:
 #        unsafe: true
-

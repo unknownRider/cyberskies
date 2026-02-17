@@ -3,7 +3,7 @@ title: "Passing the CWES: Actually fun (No, Really)"
 summary: "Turns out hunting web vulnerabilities and exploiting code is way more enjoyable than I expected—here's why CWE was the most fun I've had with a certification."
 date: "2024-07-20"
 categories: [certs]
-tags: ["hackthebox"]
+tags: ["hackthebox", "cwes", "bug bounty", "web pentest"]
 draft: false
 ---
 
